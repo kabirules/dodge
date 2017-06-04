@@ -81,6 +81,8 @@ public class PlayerMovement : MonoBehaviour {
         // No momentum
         Move(moveX, moveY, movement);
 
+        Debug.Log(GetComponent<Transform>().position.y);
+
         }
 
     void Move(float h, float v, Vector2 movement)

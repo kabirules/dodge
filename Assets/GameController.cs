@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
@@ -10,17 +11,26 @@ public class GameController : MonoBehaviour {
     public float startWait;
     public float waveWait;
 
+    public GUIText gameOverText;
+    public GUIText restartText;
+
     private bool gameOver;
+    private bool restart;
 
     // Use this for initialization
     void Start () {
         gameOver = false;
+        restart = false;
         PlayerPrefs.SetInt("Score", 0);
         StartCoroutine(SpawnWalls());
     }
 	
 	// Update is called once per frame
 	void Update () {
+        if (restart && Input.GetButton("Fire1"))
+        {
+            SceneManager.LoadScene("Main");
+        }
         if (Input.GetKey("escape"))
             Application.Quit();
     }
@@ -38,22 +48,20 @@ public class GameController : MonoBehaviour {
                 yield return new WaitForSeconds(spawnWait);
             }
             yield return new WaitForSeconds(waveWait);
-/*
+
             if (gameOver)
             {
-                //restartText.text = "Press 'R' for Restart";
-                restartText.text = "Tap anywhere to Restart";
+                restartText.text = "Tap anywhere to restart";
                 restart = true;
                 //Application.LoadLevel("MainMenu");
                 break;
             }
-*/
         }
     }
 
     public void GameOver()
     {
-        //gameOverText.text = "Game Over!";
+        gameOverText.text = "GAME OVER!";
         gameOver = true;
     }
 

@@ -30,15 +30,12 @@ public class DestroyByContact : MonoBehaviour {
         {
             return;
         }
-        //Instantiate(explosion, transform.position, transform.rotation);
         if (other.tag == "Wall")
         {
-            Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
+            Instantiate(playerExplosion, transform.position, transform.rotation);
             gameController.GameOver();
             Debug.Log("Player has been hit");
         }
-        //gameController.AddScore(scoreValue);
-        //Destroy(other.gameObject);
         Destroy(gameObject);
     }
 }
