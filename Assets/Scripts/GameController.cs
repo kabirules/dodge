@@ -32,7 +32,8 @@ public class GameController : MonoBehaviour {
             SceneManager.LoadScene("Main");
         }
         if (Input.GetKey("escape"))
-            Application.Quit();
+            SceneManager.LoadScene("Home");
+            //Application.Quit();
     }
 
     IEnumerator SpawnWalls()

@@ -14,12 +14,15 @@ public class PlayerMovement : MonoBehaviour {
     private float LEFT_BOUNDX = -2.7f;
     private float RIGHT_BOUNDX = 2.7f;
 
+    private AudioSource audio;
+
     // Use this for initialization
     void Start () {
 
         //Get and store a reference to the Rigidbody2D component so that we can access it.
         rb2d = GetComponent<Rigidbody2D>();
         //transform = GetComponent<Transform>();
+        audio = GetComponent<AudioSource>();
 
         camera = GameObject.Find("Main Camera").GetComponent<Camera>();
     }
@@ -49,6 +52,7 @@ public class PlayerMovement : MonoBehaviour {
             if (currentMouseClickWorldSpace.x < 0)
             {
                 moveX = moveX * -1;
+                audio.Play();
             }
         }
 
