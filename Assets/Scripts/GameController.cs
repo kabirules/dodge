@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using StartApp;
 
 public class GameController : MonoBehaviour {
 
@@ -19,6 +20,11 @@ public class GameController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+
+#if UNITY_ANDROID
+        StartAppWrapper.removeBanner();
+#endif
+
         gameOver = false;
         restart = false;
         PlayerPrefs.SetInt("Score", 0);
