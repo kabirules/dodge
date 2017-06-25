@@ -1,7 +1,7 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{F0049ACD-3951-499D-61B0-F23667FA9BBC}") = "dodge", "Assembly-CSharp.csproj", "{29139FD6-172C-2988-81A4-93255CE228D3}"
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dodge.CSharp", "dodge.CSharp.csproj", "{F3929E60-0FAF-7AF1-6A06-996323E678EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{29139FD6-172C-2988-81A4-93255CE228D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{29139FD6-172C-2988-81A4-93255CE228D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{29139FD6-172C-2988-81A4-93255CE228D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{29139FD6-172C-2988-81A4-93255CE228D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3929E60-0FAF-7AF1-6A06-996323E678EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3929E60-0FAF-7AF1-6A06-996323E678EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3929E60-0FAF-7AF1-6A06-996323E678EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3929E60-0FAF-7AF1-6A06-996323E678EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
